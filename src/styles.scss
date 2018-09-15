@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+
+.er-primary-fab {
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+}
+
+.er-title {
+	padding: 20px 0px 0px 0px;
+}
+
+.er-label {
+	font-weight: 600;
+}
+
+.er-card-position {
+	margin-top: 50px;
+}
+
+.er-row-highlight {
+	font-weight: 500;
+}
+
+.er-show-entity-row {
+	padding-bottom: 10px;
+}
+
+.er-show-entity-label {
+	font-weight: 500;
+}
+
+
+mat-card {
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.mat-card-header-text {
+	margin: 0px 0px !important;
+}
+
+.mat-card-actions {
+	margin: 0 0 0 0px !important;
+}
+
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-72 { font-size: 72px; }

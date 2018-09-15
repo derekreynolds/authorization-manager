@@ -1,0 +1,53 @@
+<mat-card class="er-card-position">
+
+	<mat-card-header>
+		<div class="mat-title er-title">
+			Users
+		</div>
+	</mat-card-header>
+
+	<mat-card-content>
+
+		<div class="row">			
+			<mat-form-field *ngIf="search">
+	  			<input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+			</mat-form-field>
+		</div>
+
+		<div class="mat-elevation-z8">
+
+			<mat-table [dataSource]="dataSource" matSort>
+
+			    <ng-container matColumnDef="username">
+			      	<mat-header-cell *matHeaderCellDef mat-sort-header> User name </mat-header-cell>
+			      	<mat-cell *matCellDef="let row"> {{row.username}} </mat-cell>
+			    </ng-container>
+			    
+			    <ng-container matColumnDef="firstName">
+			      	<mat-header-cell *matHeaderCellDef mat-sort-header> First name </mat-header-cell>
+			      	<mat-cell *matCellDef="let row"> {{row.firstName}} </mat-cell>
+			    </ng-container>
+			    
+			    <ng-container matColumnDef="lastName">
+			      	<mat-header-cell *matHeaderCellDef mat-sort-header> Last name </mat-header-cell>
+			      	<mat-cell *matCellDef="let row"> {{row.lastName}} </mat-cell>
+				</ng-container>
+				
+				<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    			<mat-row *matRowDef="let row; columns: displayedColumns;" erClickableRow (click)="onClickShow(row.id)"></mat-row>
+
+			</mat-table>
+
+			<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+		</div>
+
+	</mat-card-content>
+
+</mat-card>
+
+<div class="er-primary-fab">
+  	<button mat-fab color="accent" (click)="onClickAdd()">
+  		<mat-icon aria-label="Create user">add</mat-icon>
+  	</button>
+</div>

@@ -1,0 +1,29 @@
+<div>
+
+	<form [formGroup]="loginForm">
+
+		<mat-card class="er-card-position" fxLayout="column" fxFlexOffset="25" fxFlex="50" fxLayoutAlign="center" fxLayoutGap="40px">
+
+			<h1 class="mat-display-2 er-heading">Authorization Manager</h1>
+
+			<div fxLayout="row" fxLayoutAlign="center">
+				<mat-form-field fxFlex="50">
+				    <input matInput type="email" placeholder="Email" formControlName="email">
+				</mat-form-field>
+			</div>
+
+			<div fxLayout="row" fxLayoutAlign="center">
+				<mat-form-field fxFlex="50">
+				    <input matInput type="password" placeholder="Password" formControlName="password">
+				</mat-form-field>
+			</div>
+
+			<div fxLayout="row" fxLayoutAlign="center">
+				<button mat-raised-button color="primary" (click)="onClickLogin()" [disabled]="loginForm.invalid">LOGIN</button>
+			</div>
+
+		</mat-card>
+
+	</form>
+
+</div>

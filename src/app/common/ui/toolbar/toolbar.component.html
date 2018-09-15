@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" *ngIf="showToolbar">
+  <span>{{applicationName}}</span>
+</mat-toolbar>
+<nav mat-tab-nav-bar backgroundColor="primary" *ngIf="showTabs">
+  <a mat-tab-link
+     *ngFor="let link of navigationLinks"
+     [routerLink]="link.path"
+     routerLinkActive #rla="routerLinkActive"
+     [active]="rla.isActive">
+    {{link.label}}
+  </a>
+</nav>
