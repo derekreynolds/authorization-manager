@@ -1,0 +1,32 @@
+<mat-card class="er-card-position">
+
+	<form [formGroup]="securityGroupForm">
+
+		<mat-card-header>
+			<div class="mat-title er-title">
+				Edit securityGroup
+			</div>
+		</mat-card-header>
+
+		<mat-card-content fxLayout="column">
+
+			<div fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutGap="1%">
+				<mat-form-field fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+			    	<input matInput placeholder="name" type="text" formControlName="name">
+			  	</mat-form-field> 	
+			  	<div fxFlex.lt-md="100%" fxFlex.gt-sm="50%">
+			    	
+			  	</div>
+			</div> 
+			
+	  	</mat-card-content>
+
+	  	<mat-card-actions>
+	  		<div fxLayout="row">	
+				<button mat-raised-button color="primary" (click)="onClickSave()" [disabled]="userForm.invalid">Save</button> <button mat-raised-button (click)="onClickCancel()">Cancel</button>
+			</div>
+	  	</mat-card-actions>
+
+	</form>
+
+</mat-card>	

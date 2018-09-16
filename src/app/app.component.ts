@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ToolbarService } from 'app/common/ui/toolbar';
 import { RestClientFactoryService } from 'app/common/rest'
-import { User } from 'app/common/model';
+import { User, SecurityGroup } from 'app/common/model';
 
 
 @Component({
@@ -21,5 +21,6 @@ export class AppComponent implements OnInit {
     	this.toolbarService.setShowToolbar(true);
 
     	this.restClientFactoryService.register(new User, 'api/v1/users');
+    	this.restClientFactoryService.register(new SecurityGroup, 'api/v1/security-groups');
     }
 }

@@ -15,7 +15,7 @@ export class ToolbarSetupService {
 	}
 
 	initialiseNavigationTabs() {
-		this.toolbarService.setNavigationLinks([new NavigationLink('Users', '/users'), new NavigationLink('Security groups', '/securitygroups'), new NavigationLink('Admin', '/admin')]);
+		this.toolbarService.setNavigationLinks([new NavigationLink('Users', '/users'), new NavigationLink('Security groups', '/security-groups'), new NavigationLink('Admin', '/admin')]);
   		this.toolbarService.setShowTabs(true);
 	}
 

@@ -1,0 +1,31 @@
+<mat-card class="er-card-position">
+
+		<mat-card-header>
+			<div class="mat-title er-title">
+				Show securityGroup
+			</div>
+		</mat-card-header>
+
+		<mat-card-content fxLayout="column">
+
+			<div fxLayout.gt-sm="row" class="er-show-entity-row">
+
+				<div fxFlex="25%" class="mat-input er-show-entity-label">
+			    	Name
+			  	</div>
+
+			  	<div fxFlex="75%">
+			    	{{securityGroup?.name}}
+			  	</div>
+
+			</div> 
+
+	  	</mat-card-content>
+
+	  	<mat-card-actions>
+	  		<div fxLayout="row">	
+				<button mat-raised-button color="primary" (click)="onClickEdit()">Edit</button> <button mat-raised-button color="warn" (click)="onClickDelete()">Delete</button> <button mat-raised-button (click)="onClickCancel()">Cancel</button>
+			</div>
+	  	</mat-card-actions>
+
+</mat-card>	

@@ -20,6 +20,7 @@ import { ToolbarComponent, ToolbarService } from 'app/common/ui/toolbar';
 import { ToolbarSetupService } from 'app/common/util';
 import { ClickableIndicatorDirective } from './common/ui/util/clickable-indicator.directive';
 import { UserComponent, AddUserComponent, ShowUserComponent, EditUserComponent } from 'app/user';
+import { SecurityGroupComponent, AddSecurityGroupComponent, ShowSecurityGroupComponent, EditSecurityGroupComponent } from 'app/security-group';
 import { ClickableRowDirective } from './common/ui/util/clickable-row.directive';
 import { DeleteDialogComponent } from './common/ui/dialog/delete/delete-dialog.component';
 
@@ -33,9 +34,13 @@ import { DeleteDialogComponent } from './common/ui/dialog/delete/delete-dialog.c
 	  UserComponent,
     AddUserComponent,
     ShowUserComponent,
+    EditUserComponent,
     ClickableRowDirective,
     DeleteDialogComponent,
-    EditUserComponent   
+    SecurityGroupComponent,
+    AddSecurityGroupComponent,
+    ShowSecurityGroupComponent,
+    EditSecurityGroupComponent 
   ],
   imports: [
   	BrowserAnimationsModule,

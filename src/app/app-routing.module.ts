@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from 'app/user/login/login.component';
 import { UserComponent, AddUserComponent, ShowUserComponent, EditUserComponent } from 'app/user';
+import { SecurityGroupComponent, AddSecurityGroupComponent, ShowSecurityGroupComponent, EditSecurityGroupComponent } from 'app/security-group';
 
 
 export const routes: Routes = [
@@ -25,5 +26,21 @@ export const routes: Routes = [
     {
     	path: 'users/edit/:id',
       	component: EditUserComponent
+    },
+    {
+      	path: 'security-groups',
+      	component: SecurityGroupComponent
+    }, 
+    {
+    	path: 'security-groups/add',
+      	component: AddSecurityGroupComponent
+    }, 
+    {
+    	path: 'security-groups/show/:id',
+      	component: ShowSecurityGroupComponent
+    }, 
+    {
+    	path: 'security-groups/edit/:id',
+      	component: EditSecurityGroupComponent
     }
 ];

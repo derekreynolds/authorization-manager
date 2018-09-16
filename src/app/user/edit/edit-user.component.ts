@@ -9,7 +9,7 @@ import { User } from 'app/common/model';
 @Component({
   selector: 'app-edit-user',
   templateUrl: './edit-user.component.html',
-  styleUrls: ['./edit-user.component.css']
+  styleUrls: ['./edit-user.component.scss']
 })
 export class EditUserComponent implements OnInit {
 
@@ -58,7 +58,7 @@ export class EditUserComponent implements OnInit {
     	firstName: [ '', Validators.required ],
     	lastName: [ '', Validators.required ],
     	enabled: [true],
-    	locked: ['']
+    	locked: [false]
   	});
   }
 

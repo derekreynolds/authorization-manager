@@ -1,3 +1,43 @@
-<p>
-  security-group works!
-</p>
+<mat-card class="er-card-position">
+
+	<mat-card-header>
+		<div class="mat-title er-title">
+			Security groups
+		</div>
+	</mat-card-header>
+
+	<mat-card-content>
+
+		<div class="row">			
+			<mat-form-field *ngIf="search">
+	  			<input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+			</mat-form-field>
+		</div>
+
+		<div class="mat-elevation-z8">
+
+			<mat-table [dataSource]="dataSource" matSort>
+
+			    <ng-container matColumnDef="name">
+			      	<mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+			      	<mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+			    </ng-container>
+			   				
+				<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    			<mat-row *matRowDef="let row; columns: displayedColumns;" erClickableRow (click)="onClickShow(row.id)"></mat-row>
+
+			</mat-table>
+
+			<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+		</div>
+
+	</mat-card-content>
+
+</mat-card>
+
+<div class="er-primary-fab">
+  	<button mat-fab color="accent" (click)="onClickAdd()">
+  		<mat-icon aria-label="Create">add</mat-icon>
+  	</button>
+</div>
